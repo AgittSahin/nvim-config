@@ -26,7 +26,7 @@
 ### Quick Install
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/YOUR_USERNAME/nvim-config/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/AgittSahin/nvim-config/main/install.sh)
 ```
 
 ### Manual Install
@@ -38,7 +38,7 @@ mv ~/.config/nvim ~/.config/nvim.backup
 
 2. Clone this repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/nvim-config.git ~/.config/nvim
+git clone https://github.com/AgittSahin/nvim-config.git ~/.config/nvim
 ```
 
 3. Create undo directory:
