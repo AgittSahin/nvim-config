@@ -19,7 +19,7 @@ fi
 
 # Clone the repository
 echo "📥 Cloning configuration..."
-git clone https://github.com/YOUR_USERNAME/nvim-config.git "$HOME/.config/nvim"
+git clone https://github.com/AgittSahin/nvim-config.git "$HOME/.config/nvim"
 
 # Create undo directory
 echo "📁 Creating undo directory..."
