@@ -1,0 +1,17 @@
+# Lazy.nvim plugin directory
+lazy-lock.json
+
+# Neovim
+.luarc.json
+
+# System
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Backup files
+*.backup
+
+# Local customization
+local.lua
