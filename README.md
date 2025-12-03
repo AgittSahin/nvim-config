@@ -1,9 +1,3 @@
-# 🚀 Neovim Configuration
-
-A modern, feature-rich Neovim configuration built with Lua and lazy.nvim. Optimized for software development with LSP, debugging, and powerful navigation tools.
-
-## ✨ Features
-
 - **Plugin Manager**: [lazy.nvim](https://github.com/folke/lazy.nvim) for fast plugin loading
 - **LSP Support**: Full Language Server Protocol integration with Mason
 - **Code Completion**: nvim-cmp with multiple sources (LSP, snippets, buffer, path)
