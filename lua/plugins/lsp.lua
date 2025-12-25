@@ -38,22 +38,60 @@ return {
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             local servers = {
+                -- Python: Best LSP with full refactoring support
                 basedpyright = {
                     settings = {
                         basedpyright = {
-                            typeCheckingMode = "off",
+                            typeCheckingMode = "basic",
+                            -- Enable all analysis features
+                            analysis = {
+                                autoImportCompletions = true,
+                                autoSearchPaths = true,
+                                diagnosticMode = "workspace",
+                                useLibraryCodeForTypes = true,
+                                -- Enable inlay hints
+                                inlayHints = {
+                                    variableTypes = true,
+                                    functionReturnTypes = true,
+                                },
+                            },
                         },
                     },
                 },
+                -- C/C++: clangd is the best, supports refactoring
                 clangd = {
                     init_options = {
                         fallbackFlags = {
                             "-std=c++23",
                         },
-                    }
+                    },
+                    capabilities = {
+                        offsetEncoding = { "utf-16" },
+                    },
                 },
-                lua_ls = {},
-                rust_analyzer = {},
+                -- Lua: configured for Neovim development
+                lua_ls = {
+                    settings = {
+                        Lua = {
+                            hint = { enable = true },
+                            telemetry = { enable = false },
+                        },
+                    },
+                },
+                -- Rust: rust-analyzer is excellent for refactoring
+                rust_analyzer = {
+                    settings = {
+                        ["rust-analyzer"] = {
+                            checkOnSave = {
+                                command = "clippy",
+                            },
+                            inlayHints = {
+                                enable = true,
+                            },
+                        },
+                    },
+                },
+                -- YAML: with schemas for common formats
                 yamlls = {
                     settings = {
                         yaml = {

@@ -85,28 +85,19 @@ return {
                 { "<leader>fj", "<cmd>FzfLua jumps<cr>", desc = "Find jumps" },
                 { "<leader>fW", "<cmd>FzfLua grep_cword<cr>", desc = "Find word under cursor" },
                 { "<leader>fR", "<cmd>FzfLua resume<cr>", desc = "Resume last search" },
+                { "<leader>f?", "<cmd>lua require('config.productivity-guide').show()<cr>", desc = "Productivity guide" },
+                { "<leader>fp", "<cmd>edit ~/code/vim-daily-workout.md<cr>", desc = "Daily practice" },
 
                 -- ═══════════════════════════════════════════════════════════
-                -- 󰊢 GIT (All git operations)
+                -- 󰊢 GIT (LazyGit - all git operations in one TUI)
                 -- ═══════════════════════════════════════════════════════════
-                { "<leader>gg", "<cmd>Git<cr>", desc = "Git status" },
-                { "<leader>gc", "<cmd>Git commit<cr>", desc = "Commit" },
-                { "<leader>gp", "<cmd>Git push<cr>", desc = "Push" },
-                { "<leader>gP", "<cmd>Git pull<cr>", desc = "Pull" },
-                { "<leader>gl", "<cmd>Git log<cr>", desc = "Log" },
-                { "<leader>gb", "<cmd>FzfLua git_branches<cr>", desc = "Branches" },
-                { "<leader>gf", "<cmd>FzfLua git_status<cr>", desc = "Git files (status)" },
-                { "<leader>gC", "<cmd>FzfLua git_commits<cr>", desc = "Commits" },
-                -- Gitsigns operations (defined in editor.lua on_attach, listed here for visibility)
-                { "<leader>gs", desc = "Stage hunk" },
-                { "<leader>gr", desc = "Reset hunk" },
-                { "<leader>gS", desc = "Stage buffer" },
-                { "<leader>gR", desc = "Reset buffer" },
-                { "<leader>gu", desc = "Undo stage hunk" },
-                { "<leader>gd", desc = "Diff this" },
-                { "<leader>gD", desc = "Diff ~" },
-                { "<leader>gB", desc = "Blame line" },
-                { "<leader>gv", desc = "Preview hunk" },
+                { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+                { "<leader>gs", desc = "+ Stage Hunk" },
+                { "<leader>gr", desc = "⭯ Reset Hunk" },
+                { "<leader>gu", desc = "- Undo Stage Hunk" },
+                { "<leader>gp", desc = "👀 Preview Hunk" },
+                { "<leader>gb", desc = " blames Line" },
+                { "<leader>gd", desc = "Diff This" },
 
                 -- ═══════════════════════════════════════════════════════════
                 -- 󰓩 BUFFER
@@ -133,17 +124,25 @@ return {
                 { "<leader>cl", "<cmd>lua vim.lsp.codelens.run()<cr>", desc = "CodeLens run" },
 
                 -- ═══════════════════════════════════════════════════════════
-                -- 󰃤 DEBUG
+                -- 󰃤 DEBUG (PyCharm-level debugging)
                 -- ═══════════════════════════════════════════════════════════
-                { "<leader>db", "<cmd>lua require('dap').toggle_breakpoint()<cr>", desc = "Toggle breakpoint" },
-                { "<leader>dc", "<cmd>lua require('dap').continue()<cr>", desc = "Continue" },
-                { "<leader>di", "<cmd>lua require('dap').step_into()<cr>", desc = "Step into" },
-                { "<leader>do", "<cmd>lua require('dap').step_over()<cr>", desc = "Step over" },
-                { "<leader>dO", "<cmd>lua require('dap').step_out()<cr>", desc = "Step out" },
-                { "<leader>dr", "<cmd>lua require('dap').restart()<cr>", desc = "Restart" },
-                { "<leader>dl", "<cmd>lua require('dap').run_last()<cr>", desc = "Run last" },
-                { "<leader>dt", "<cmd>lua require('dap-view').toggle()<cr>", desc = "Toggle DAP UI" },
-                { "<leader>dC", "<cmd>lua require('dap').run_to_cursor()<cr>", desc = "Run to cursor" },
+                { "<leader>d?", "<cmd>lua require('config.debug-guide').show()<cr>", desc = "Debug guide" },
+                { "<leader>db", desc = "Toggle breakpoint" },
+                { "<leader>dB", desc = "Conditional breakpoint" },
+                { "<leader>dc", desc = "Continue (F5)" },
+                { "<leader>di", desc = "Step into (F11)" },
+                { "<leader>do", desc = "Step over (F10)" },
+                { "<leader>dO", desc = "Step out (F12)" },
+                { "<leader>dr", desc = "Restart" },
+                { "<leader>dl", desc = "Run last" },
+                { "<leader>dt", group = "Test/Toggle" },
+                { "<leader>dtt", desc = "Toggle DAP UI" },
+                { "<leader>dtm", desc = "Test method (Python)" },
+                { "<leader>dtc", desc = "Test class (Python)" },
+                { "<leader>dC", desc = "Run to cursor" },
+                { "<leader>dx", desc = "Terminate" },
+                { "<leader>dh", desc = "Hover variables" },
+                { "<leader>ds", desc = "Debug selection (Python)" },
 
                 -- ═══════════════════════════════════════════════════════════
                 -- 󰔡 TOGGLE
